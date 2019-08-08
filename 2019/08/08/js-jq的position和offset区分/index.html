@@ -5,15 +5,21 @@
   
 
   
-  <title>归档: 2019/8 | Hexo</title>
+  <title>js/jq的position和offset区分 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://chnpeople.github.io/archives/2019/08/index.html">
+  <meta name="description" content="js的offsetLeft 和jq的position一样，都是求自身元素的外边框到它父元素的内边框的距离 jq的offset求的是自身边框到页面的距离。 注意：1.没有初始化会带上默认值2.如果有父盒子也会算上父盒子的边框margin等参数3.如果元素的父盒子是body不能使用，参数是0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js&#x2F;jq的position和offset区分">
+<meta property="og:url" content="http://chnpeople.github.io/2019/08/08/js-jq的position和offset区分/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="js的offsetLeft 和jq的position一样，都是求自身元素的外边框到它父元素的内边框的距离 jq的offset求的是自身边框到页面的距离。 注意：1.没有初始化会带上默认值2.如果有父盒子也会算上父盒子的边框margin等参数3.如果元素的父盒子是body不能使用，参数是0">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://chnpeople.github.io/2019/08/08/js-jq的position和offset区分/pic.png">
+<meta property="og:updated_time" content="2019-08-08T07:24:21.425Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="js&#x2F;jq的position和offset区分">
+<meta name="twitter:description" content="js的offsetLeft 和jq的position一样，都是求自身元素的外边框到它父元素的内边框的距离 jq的offset求的是自身边框到页面的距离。 注意：1.没有初始化会带上默认值2.如果有父盒子也会算上父盒子的边框margin等参数3.如果元素的父盒子是body不能使用，参数是0">
+<meta name="twitter:image" content="http://chnpeople.github.io/2019/08/08/js-jq的position和offset区分/pic.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,78 +66,55 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/08/08/js-jq的position和offset区分/" class="archive-article-date">
-  <time datetime="2019-08-08T03:27:42.000Z" itemprop="datePublished">8月 8</time>
+        <section id="main"><article id="post-js-jq的position和offset区分" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/08/js-jq的position和offset区分/" class="article-date">
+  <time datetime="2019-08-08T03:27:42.000Z" itemprop="datePublished">2019-08-08</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/08/js-jq的position和offset区分/">js/jq的position和offset区分</a>
+    <h1 class="article-title" itemprop="name">
+      js/jq的position和offset区分
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/08/02/删除windows资源管理器内重复的onedrive文件夹/" class="archive-article-date">
-  <time datetime="2019-08-02T14:18:45.000Z" itemprop="datePublished">8月 2</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/删除windows资源管理器内重复的onedrive文件夹/">删除windows资源管理器内重复的onedrive文件夹</a>
-    </h1>
-  
+        <p>js的offsetLeft 和jq的position一样，都是求自身元素的外边框到它父元素的内边框的距离</p>
+<p>jq的offset求的是自身边框到页面的距离。</p>
+<p>注意：<br>1.没有初始化会带上默认值<br>2.如果有父盒子也会算上父盒子的边框margin等参数<br><strong>3.如果元素的父盒子是body不能使用，参数是0</strong></p>
+<p><img src="//chnpeople.github.io/2019/08/08/js-jq的position和offset区分/pic.png" alt="pic"></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/08/02/hello-world/" class="archive-article-date">
-  <time datetime="2019-08-02T09:28:29.537Z" itemprop="datePublished">8月 2</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/hello-world/">Hello World</a>
-    </h1>
-  
-
-    </header>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chnpeople.github.io/2019/08/08/js-jq的position和offset区分/" data-id="cjz2ek88l0001bcs5ywyektjf" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/08/02/删除windows资源管理器内重复的onedrive文件夹/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">删除windows资源管理器内重复的onedrive文件夹</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         
