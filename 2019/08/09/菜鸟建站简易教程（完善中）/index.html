@@ -5,18 +5,18 @@
   
 
   
-  <title>菜鸟nodejs建站建议教程(完善中) | Hexo</title>
+  <title>简易搭建个人网站教程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1.新建WWW文件cd /home                   进入home文件夹mkdir WWW              新建一个WWW文件夹cd /home/WWW       进入WWW文件夹 2.安装nodejs1.本地下载https://nodejs.org/dist/v10.16.2/node-v10.16.2-x64.msi 2.把文件上传到服务器中，例如：/usr/lo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="菜鸟nodejs建站建议教程(完善中)">
+<meta property="og:title" content="简易搭建个人网站教程">
 <meta property="og:url" content="http://chnpeople.github.io/2019/08/09/菜鸟建站简易教程（完善中）/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="1.新建WWW文件cd /home                   进入home文件夹mkdir WWW              新建一个WWW文件夹cd /home/WWW       进入WWW文件夹 2.安装nodejs1.本地下载https://nodejs.org/dist/v10.16.2/node-v10.16.2-x64.msi 2.把文件上传到服务器中，例如：/usr/lo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-11T11:00:56.954Z">
+<meta property="og:updated_time" content="2019-08-13T03:43:22.043Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="菜鸟nodejs建站建议教程(完善中)">
+<meta name="twitter:title" content="简易搭建个人网站教程">
 <meta name="twitter:description" content="1.新建WWW文件cd /home                   进入home文件夹mkdir WWW              新建一个WWW文件夹cd /home/WWW       进入WWW文件夹 2.安装nodejs1.本地下载https://nodejs.org/dist/v10.16.2/node-v10.16.2-x64.msi 2.把文件上传到服务器中，例如：/usr/lo">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      菜鸟nodejs建站建议教程(完善中)
+      简易搭建个人网站教程
     </h1>
   
 
@@ -94,13 +94,14 @@
 <p>3.重命名文件为nodejs，注意10.16.2是版本号，请根据自己的版本号对应修改</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ln -s <span class="regexp">/usr/</span>local<span class="regexp">/application/</span>nodejs<span class="regexp">/bin/</span>npm <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span></span><br><span class="line"></span><br><span class="line">ln -s <span class="regexp">/usr/</span>local<span class="regexp">/application/</span>nodejs<span class="regexp">/bin/</span>node <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span></span><br></pre></td></tr></table></figure>
 
-
 <p>4.分别执行以上两行代码，软连接变为全局<br>   注意：两行的/usr…../npm  和  /usr…/node   的后面都有一个空格<br>               /usr…/npm或/usr…/node是文件安装的路径，根据自己实际安装路径进行修改 5.node -v     如果有显示版本号表示安装成功</p>
-<h5 id="3-新建app-js"><a href="#3-新建app-js" class="headerlink" title="3.新建app.js"></a>3.新建app.js</h5><p>1.mkdir web               新建一个web,把网站内容全部放进去</p>
-<p>2.新建一个app.js        输入以下代码</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span>导入模块</span><br><span class="line">const fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line">const http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line">const path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line">const server = http.createServer(<span class="function"><span class="params">(request, response)</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="regexp">//</span> 获取路径，下面的web，根据上面创建的文件夹名字要一一致</span><br><span class="line">    const fullPath = path.join(__dirname, <span class="string">'web'</span>,request.url)</span><br><span class="line">    </span><br><span class="line">    fs.readFile(fullPath,<span class="function"><span class="params">(err,data)</span> =&gt;</span>&#123;</span><br><span class="line">         <span class="keyword">if</span>(err == <span class="literal">null</span>)&#123;</span><br><span class="line">                response.end(data)</span><br><span class="line">         &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             response.end(`<span class="javascript"></span></span><br><span class="line"><span class="javascript">            &lt;!DOCTYPE HTML PUBLIC <span class="string">"-//IETF//DTD HTML 2.0//EN"</span>&gt;</span></span><br><span class="line"><span class="javascript">            &lt;html&gt;<span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span></span><br><span class="line"><span class="javascript">            &lt;title&gt;<span class="number">404</span> Not Found &lt;<span class="regexp">/title&gt;</span></span></span><br><span class="line"><span class="javascript">            &lt;<span class="regexp">/head&gt;&lt;body&gt;</span></span></span><br><span class="line"><span class="javascript">            &lt;h1&gt;Not Found&lt;<span class="regexp">/h1&gt;</span></span></span><br><span class="line"><span class="javascript">            &lt;p&gt;The requested URL /$&#123;request.url&#125; was not found on <span class="keyword">this</span> server.&lt;<span class="regexp">/p&gt;</span></span></span><br><span class="line"><span class="javascript">            &lt;<span class="regexp">/body&gt;&lt;/</span>html&gt;</span></span><br><span class="line"><span class="javascript">            </span>`)</span><br><span class="line">         &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span>开启服务器,端口为<span class="number">80</span></span><br><span class="line">server.listen(<span class="number">80</span>,<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'success'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h5 id="3-安装express模块"><a href="#3-安装express模块" class="headerlink" title="3.安装express模块"></a>3.安装express模块</h5><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> init -y</span><br><span class="line"></span><br><span class="line"><span class="built_in">npm</span> i express</span><br></pre></td></tr></table></figure>
 
-<h5 id="4-安装forever运行app-js"><a href="#4-安装forever运行app-js" class="headerlink" title="4.安装forever运行app.js"></a>4.安装forever运行app.js</h5><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> forever -g</span><br></pre></td></tr></table></figure>
+<h5 id="4-新建web文件夹和app-js"><a href="#4-新建web文件夹和app-js" class="headerlink" title="4.新建web文件夹和app.js"></a>4.新建web文件夹和app.js</h5><p>1.mkdir web               新建一个web,把网站内容全部放进去</p>
+<p>2.新建一个app.js        输入以下代码</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入 express 模块</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="keyword">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="comment">// 创建服务器</span></span><br><span class="line"><span class="keyword">const</span> app =  express()</span><br><span class="line"></span><br><span class="line"><span class="comment">//通过如下代码就可以将 web 目录下的图片、CSS 文件、JavaScript 文件对外开放访问：</span></span><br><span class="line">app.<span class="keyword">use</span>(express.<span class="keyword">static</span>(<span class="string">'web'</span>))</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 启动服务器</span></span><br><span class="line">app.listen(<span class="number">80</span>,()=&gt;&#123;</span><br><span class="line">    console.log(<span class="string">'success'</span>);  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-安装forever运行app-js"><a href="#5-安装forever运行app-js" class="headerlink" title="5.安装forever运行app.js"></a>5.安装forever运行app.js</h5><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> forever -g</span><br></pre></td></tr></table></figure>
 
 <p>1.回车下载</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s <span class="regexp">/usr/</span>local<span class="regexp">/application/</span>nodejs<span class="regexp">/bin/</span> <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span></span><br></pre></td></tr></table></figure>
@@ -109,7 +110,7 @@
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">forever -v</span></span><br></pre></td></tr></table></figure>
 
 <p>3.查看版本号，如果显示则安装成功</p>
-<h5 id="5-forever运行app-js"><a href="#5-forever运行app-js" class="headerlink" title="5.forever运行app.js"></a>5.forever运行app.js</h5><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">forever</span> <span class="built_in">start</span> app.js</span><br></pre></td></tr></table></figure>
+<h5 id="6-forever运行app-js"><a href="#6-forever运行app-js" class="headerlink" title="6.forever运行app.js"></a>6.forever运行app.js</h5><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">forever</span> <span class="built_in">start</span> app.js</span><br></pre></td></tr></table></figure>
 
 
       
@@ -177,7 +178,7 @@
           </li>
         
           <li>
-            <a href="/2019/08/09/菜鸟建站简易教程（完善中）/">菜鸟nodejs建站建议教程(完善中)</a>
+            <a href="/2019/08/09/菜鸟建站简易教程（完善中）/">简易搭建个人网站教程</a>
           </li>
         
           <li>
