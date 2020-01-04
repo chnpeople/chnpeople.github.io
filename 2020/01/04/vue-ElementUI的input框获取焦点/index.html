@@ -5,19 +5,19 @@
   
 
   
-  <title>jq反选 | Hexo</title>
+  <title>vue ElementUI的input框获取焦点 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JQ12345$(&apos;#res&apos;).click(function()&amp;#123;    $(&apos;.ipt&apos;).each(function()&amp;#123;        $(this).prop(&apos;checked&apos;,!$(this).prop(&apos;checked&apos;));    &amp;#125;);&amp;#125;);  JS12345reverseCheck.onclick = function () &amp;#123">
+  <meta name="description" content="1&amp;lt;el-input ref=&quot;focusIpt&quot; placeholder=&quot;请输入内容&quot;&amp;gt;&amp;lt;/el-input&amp;gt;  123this.$nextTick(()=&amp;gt;&amp;#123;    this.$refs[&apos;focusIpt&apos;].focus();&amp;#125;)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jq反选">
-<meta property="og:url" content="http://chnpeople.github.io/2019/08/07/jq反选/index.html">
+<meta property="og:title" content="vue ElementUI的input框获取焦点">
+<meta property="og:url" content="http://chnpeople.github.io/2020/01/04/vue-ElementUI的input框获取焦点/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JQ12345$(&apos;#res&apos;).click(function()&amp;#123;    $(&apos;.ipt&apos;).each(function()&amp;#123;        $(this).prop(&apos;checked&apos;,!$(this).prop(&apos;checked&apos;));    &amp;#125;);&amp;#125;);  JS12345reverseCheck.onclick = function () &amp;#123">
+<meta property="og:description" content="1&amp;lt;el-input ref=&quot;focusIpt&quot; placeholder=&quot;请输入内容&quot;&amp;gt;&amp;lt;/el-input&amp;gt;  123this.$nextTick(()=&amp;gt;&amp;#123;    this.$refs[&apos;focusIpt&apos;].focus();&amp;#125;)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-13T03:45:54.915Z">
+<meta property="og:updated_time" content="2020-01-04T11:27:54.114Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jq反选">
-<meta name="twitter:description" content="JQ12345$(&apos;#res&apos;).click(function()&amp;#123;    $(&apos;.ipt&apos;).each(function()&amp;#123;        $(this).prop(&apos;checked&apos;,!$(this).prop(&apos;checked&apos;));    &amp;#125;);&amp;#125;);  JS12345reverseCheck.onclick = function () &amp;#123">
+<meta name="twitter:title" content="vue ElementUI的input框获取焦点">
+<meta name="twitter:description" content="1&amp;lt;el-input ref=&quot;focusIpt&quot; placeholder=&quot;请输入内容&quot;&amp;gt;&amp;lt;/el-input&amp;gt;  123this.$nextTick(()=&amp;gt;&amp;#123;    this.$refs[&apos;focusIpt&apos;].focus();&amp;#125;)">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-jq反选" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-vue-ElementUI的input框获取焦点" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/08/07/jq反选/" class="article-date">
-  <time datetime="2019-08-07T01:39:11.000Z" itemprop="datePublished">2019-08-07</time>
+    <a href="/2020/01/04/vue-ElementUI的input框获取焦点/" class="article-date">
+  <time datetime="2020-01-04T11:24:22.000Z" itemprop="datePublished">2020-01-04</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      jq反选
+      vue ElementUI的input框获取焦点
     </h1>
   
 
@@ -86,15 +86,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="JQ"><a href="#JQ" class="headerlink" title="JQ"></a>JQ</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#res'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">'.ipt'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        $(<span class="keyword">this</span>).prop(<span class="string">'checked'</span>,!$(<span class="keyword">this</span>).prop(<span class="string">'checked'</span>));</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-input</span> <span class="attr">ref</span>=<span class="string">"focusIpt"</span> <span class="attr">placeholder</span>=<span class="string">"请输入内容"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">reverseCheck.onclick = <span class="function"><span class="keyword">function</span> <span class="params">()</span> &#123;           </span></span><br><span class="line">    <span class="keyword">for</span>(var <span class="built_in">i</span> = <span class="number">0</span>;<span class="built_in">i</span>&lt;checkList.<span class="built_in">length</span>;<span class="built_in">i</span>++)&#123;         </span><br><span class="line">        checkList[<span class="built_in">i</span>].checked =  !checkList[<span class="built_in">i</span>].checked;   </span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$nextTick(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.$refs[<span class="string">'focusIpt'</span>].focus();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chnpeople.github.io/2019/08/07/jq反选/" data-id="ck4zi7w250004n0s5xrs6q137" class="article-share-link">Share</a>
+      <a data-url="http://chnpeople.github.io/2020/01/04/vue-ElementUI的input框获取焦点/" data-id="ck4zi7w0f0001n0s5zfpqcb5v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -103,19 +103,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/08/08/js-jq的position和offset区分/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          js/jq的position和offset区分
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/02/删除windows资源管理器内重复的onedrive文件夹/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/10/21/删除win10桌面图标小箭头/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">删除windows资源管理器内重复的onedrive文件夹</div>
+      <div class="article-nav-title">删除win10桌面图标小箭头</div>
     </a>
   
 </nav>
